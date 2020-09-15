@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
   <body>
@@ -23,3 +24,30 @@
     </script>
   </body>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+  <body>
+    <img
+      id="myHeart"
+      onclick="changeImage()"
+      src="Heart.PNG"
+      width="100"
+      height="100"
+    />
+
+    <p>Click the heart to break heart</p>
+
+    <script>
+      function changeImage() {
+        var image = document.getElementById("myHeart");
+        if (image.src.match("Heart")) {
+          image.src = "BrokenDil.PNG";
+        } else {
+          image.src = "Heart.PNG";
+        }
+      }
+    </script>
+  </body>
+</html>
+>>>>>>> Attributes Change file
