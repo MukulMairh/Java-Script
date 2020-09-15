@@ -1,0 +1,31 @@
+<!--Statemenets are executed in order as they are written-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StatementInJS</title>
+  </head>
+  <body>
+    <p>In the below line you will see addition of 5,2,3,4</p>
+    <br />
+    <p id="demo1"></p>
+    <p>This example is of multiple java script statements into a same block</p>
+    <p>Addition of 5,2</p>
+    <br />
+    <p id="demo2"></p>
+    <script>
+      var a = 5;
+      var b;
+      var c, d;
+      b = 2;
+      c = 3;
+      d = 4;
+      //Multiple statements are allowed when semi-colon separated.
+      var e = a + b + c + d;
+      var f = a + b;
+      document.getElementById("demo1").innerHTML = e;
+      document.getElementById("demo2").innerHTML = f;
+    </script>
+  </body>
+</html>

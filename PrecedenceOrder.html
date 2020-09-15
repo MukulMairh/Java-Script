@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Precedence Order</title>
+  </head>
+  <body>
+    <p id="IncDec"></p>
+    <p></p>
+    <script>
+      var a = 2,
+        b = 3;
+      //check console. ctrl+shift+i
+      //Watch precedence of changes made and their reflection in result
+      document.getElementById("IncDec").innerHTML = a++ + --b; //2+2=4
+      console.log(a); //2+1=3
+      console.log(b); //2
+      console.log(a++); //3
+      console.log(--a); //4-1=3
+      console.log(a++ + --b); //3+1=4
+      console.log(--b); //0
+      console.log(++b); //1
+      console.log(b++); //1
+      console.log(b); //1+1=2
+      //By this we got to know that pre increment/decrement has more precedence than post inc/dec.
+    </script>
+  </body>
+</html>
+<!--For more on precedence:  https://www.w3schools.com/js/js_arithmetic.asp-->

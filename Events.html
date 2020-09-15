@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events in JS</title>
+  </head>
+  <body>
+    <!--On calling  a button, event occurs that is responsible for showing date & time-->
+    <!--Here function is embedded in a button only. -->
+    <button onclick="document.getElementById('demo').innerHTML=Date()">
+      Current date and time?
+    </button>
+    <!--Calling in a paragraph-->
+    <p id="demo"></p>
+
+    <script>
+      //We have seen concept of date function calling through button above.
+      // Now let's make our own function and try the same instead of date function.
+      function myAdditionFun() {
+        return 2 + 3;
+      }
+      //function calling will be done in button
+    </script>
+    <!--Calling within a button with the help of this keyword.-->
+    <button onclick="this.innerHTML=myAdditionFun()">Addition of 2 & 3</button>
+    <!--Without the help of this keyword-->
+    <button onclick="innerHTML=myAdditionFun()">Addition of 2 and 3</button>
+    <script></script>
+  </body>
+</html>

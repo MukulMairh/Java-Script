@@ -1,0 +1,62 @@
+<!--In this file you will see how declare, define & use a variable.-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables</title>
+    <script>
+      function size() {
+        var a = 7;
+        //In the next line we will be calling variable.
+        document.getElementById("rank").innerHTML = a;
+        //How to hide a button after use ? style.display="none" can also be used.
+        document.getElementById("q1").style.visibility = "hidden";
+        document.getElementById("notice").innerHTML =
+          "Woh! Bro you hidden that button after use.";
+      }
+      function ekOrFuntion() {
+        //How to declare & define multiple variables.
+        //These varaibles are in span way, comma separated but they are in a single line.
+
+        var person = "Mukul",
+          car = "BMW",
+          price = 250,
+          salary; //Here salary is undefined.
+        document.getElementById("umm").innerHTML =
+          "Person name: " +
+          person +
+          "," +
+          " Salary: " +
+          salary +
+          "," +
+          " \n Car owned: " +
+          car +
+          "," +
+          " \t Car's Prize: " +
+          price;
+      }
+      function basEkOr() {
+        //Some tricky questions
+        var a = 2 + 3 + 5;
+        var x = 2 + 3 + "5";
+        document.getElementById("trickq1").innerHTML = "Sum of 2+3+5 is " + a;
+        document.getElementById("trickq2").innerHTML = "Sum of 2+3+'5' is " + x;
+      }
+    </script>
+  </head>
+  <body>
+    <p>What's India's rank on the basis of Country size?</p>
+    <p id="rank"></p>
+    <button id="q1" onclick="size()">You Better tell me</button>
+    <p id="notice"></p>
+    <!--Button 1 functionality ends here-->
+    <!--Button 2 starts here-->
+    <button onclick="ekOrFuntion()">Print values</button>
+    <p id="umm"></p>
+    <!--Button 3 starts here-->
+    <button onclick="basEkOr()">See variable summations</button>
+    <p id="trickq1"></p>
+    <p id="trickq2"></p>
+  </body>
+</html>

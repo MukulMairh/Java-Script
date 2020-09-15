@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSObjects</title>
+  </head>
+  <body>
+    <p id="way1"></p>
+    <p id="way2"></p>
+    <p id="way3"></p>
+    <p id="thisKeyword"></p>
+    <p id="Str"></p>
+    <p id="Num"></p>
+    <p id="Boo"></p>
+    <p id="Obj"></p>
+    <script>
+      //Create an object.
+      var car;
+      car = { Brand: "Aston Martin", Model: "Mini Cooper", color: "Blue" };
+      //Now let us display some data out of it.
+      //Way 1.
+      document.getElementById("way1").innerHTML = car.Brand;
+      //Way 2.
+      document.getElementById("way2").innerHTML = car["color"];
+      //Combine both way.
+      document.getElementById("way3").innerHTML =
+        "Car Brand is: " + car.Brand + " where MOdel is:  " + car["Model"];
+      //Ab Object can even contain function.
+      var person = {
+        firstName: "Mukul",
+        lastName: "Soni",
+        fullName: function () {
+          return this.firstName + " " + this.lastName; //Concept of this keyword.
+        },
+      };
+      //By using this keyword we have brought the values of variables with in a function and we used that function for lateral process.
+      document.getElementById("thisKeyword").innerHTML = person.fullName();
+      //When a JavaScript variable is declared with the keyword "new", the variable is created as an object:
+      var x = new String();
+      var y = new Number();
+      var x = new Boolean();
+      var z1 = new Object();
+      document.getElementById("Str").innerHTML = "Typeof x is : " + typeof x;
+      document.getElementById("Num").innerHTML = "Typeof y is : " + typeof y;
+      document.getElementById("Boo").innerHTML = "Typeof z is : " + typeof z;
+      document.getElementById("Obj").innerHTML = "Typeof z1 is : " + typeof z1;
+      //Avoid String, Number, and Boolean objects. They complicate your code and slow down execution speed.
+    </script>
+  </body>
+</html>

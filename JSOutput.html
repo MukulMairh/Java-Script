@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diff JS Output</title>
+    <script>
+      function InneHTML() {
+        document.getElementById("output").innerHTML = 10 + 20;
+      }
+      /*
+         Using document.write() after an HTML document is loaded, will delete all it's HTML.
+        Never call document.write after the document has finished loading. It will overwrite the whole document.
+    */
+      //For now this is not working.
+      function DocumentWrite() {
+        document.write(10 + 20);
+      }
+      function WindowAlert() {
+        alert(10 + 20);
+      }
+      function ConsoleLog() {
+        console.log(10 + 30);
+      }
+    </script>
+  </head>
+  <body>
+    <p>Let's see output of 10+20</p>
+    <br />
+    <p id="output">Here output will be displayed</p>
+    <button onclick="InneHTML()">InnerHTML output</button>
+    <button onclick="DoucumentWrite()">DocumentWrite</button>
+    <button onclick="WindowAlert()">WindowAlert</button>
+    <button onclick="ConsoleLog()">ConsoleLog</button>
+    <button onclick="window.print(10+20)">WindowsPrint</button>
+    <button onclick="document.write(1+2)">
+      1+2? using windows.write function
+    </button>
+  </body>
+</html>

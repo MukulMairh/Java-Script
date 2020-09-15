@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions</title>
+  </head>
+  <body>
+    <p id="X"></p>
+    <p id="Y"></p>
+    <script>
+      //We will see parameterised function calling concept.
+      function MuliplyBy5(m) {
+        return m * 5;
+      }
+      document.getElementById("X").innerHTML = MuliplyBy5; // returns function MuliplyBy5(m) { return m * 5; }
+      document.getElementById("Y").innerHTML = MuliplyBy5(); //returns NaN
+      document.getElementById("Y").innerHTML = MuliplyBy5(10); // returns 5*10=50
+    </script>
+    <!--So, we can call function out of method too & 
+        if the function is parameterised you will have to pass the parameters to get desired results.-->
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FunctionsDemo</title>
+  </head>
+  <!--Script can be written anywhere in the code. Here script is in head.-->
+  <script>
+    function myFun() {
+      document.getElementById("run").innerHTML =
+        "Hi! Let's run and do some fun! ";
+    }
+    function MoreFun() {
+      document.getElementById("run").innerHTML =
+        "The real fun is: After running, let's have some GolGappas!";
+    }
+  </script>
+  <body>
+    <p id="run">Feeling lazy!</p>
+    <button onclick="myFun()">Click to have fun</button>
+    <button onclick="MoreFun()">To have real fun</button>
+    <!--Here Script is in body.-->
+    <script>
+      function WhatNext() {
+        document.getElementById("run").innerHTML = "You should play Ludo";
+      }
+    </script>
+    <!--Example of External Java Script. -->
+    <script src="ExternalJS.js"></script>
+    <br />
+    <br />
+    <button onclick="WhatNext()">What should you do after that?</button>
+    <button onclick="myExtFun()">Life going fine ?</button>
+  </body>
+</html>
+<!--Using External Java Script code is useful as 
+1. It separates HTML and code
+2. It makes HTML and JavaScript easier to read and maintain
+3. Cached JavaScript files can speed up page loads-->

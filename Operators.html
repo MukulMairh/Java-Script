@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operators!!</title>
+    <script>
+      function Operate() {
+        var a = 10,
+          b = 3,
+          c = "Aaloo Dalo ",
+          d = "Sona nikalo";
+        document.getElementById("Add").innerHTML = a + b;
+        document.getElementById("Sub").innerHTML = a - b;
+        document.getElementById("Mul").innerHTML = a * b;
+        document.getElementById("Pow").innerHTML = Math.pow(a, b);
+        document.getElementById("Div").innerHTML = a / b;
+        document.getElementById("Exp").innerHTML = a ** b;
+        document.getElementById("Mod").innerHTML = a % b;
+        document.getElementById("Dec").innerHTML = --b;
+        document.getElementById("Inc").innerHTML = ++a;
+        //String concatination, \n is not working here. So used br tag.
+        document.getElementById("StrConcat").innerHTML =
+          "Example of string concatination :  :<br>" + c + d;
+        //To hide button.
+        document.getElementById("HideBtn").style.display = "none";
+        document.getElementById("afterHide").innerHTML =
+          "Button has been hidden after use.";
+      }
+    </script>
+  </head>
+  <body>
+    <p>Hi this one is on Operators</p>
+    <p>Here variables with definition are: a='10' and b='3'</p>
+    <p>Addition</p>
+    <p id="Add"></p>
+    <p id="StrConcat"></p>
+    <br />
+    <p>Substraction</p>
+    <p id="Sub"></p>
+    <br />
+    <p>Divide</p>
+    <p id="Div"></p>
+    <br />
+    <p>Multiplication</p>
+    <p id="Mul"></p>
+    <br />
+    <p>Exponential</p>
+    <p id="Exp"></p>
+    <br />
+    <p>Power</p>
+    <p id="Pow"></p>
+    <br />
+    <p>Modulus</p>
+    <p id="Mod"></p>
+    <br />
+    <p>Increment</p>
+    <p id="Inc"></p>
+    <br />
+    <p>Decrement</p>
+    <p id="Dec"></p>
+    <br />
+    <button id="HideBtn" onclick="Operate()">
+      Show us all operations performed.
+    </button>
+    <p id="afterHide"></p>
+  </body>
+</html>
