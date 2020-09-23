@@ -53,17 +53,33 @@
       to replace all occurances in a string... make use of '/g' that's global-->
     </p>
     <p id="a22"></p>
+    <p>Coverting string to upper case</p>
     <p id="a23"></p>
+    <p>Converting string to lower case.</p>
     <p id="a24"></p>
+    <p>Learning concepts of concatination</p>
     <p id="a25"></p>
-    <p id="a26"></p>
+    <p>New string >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>></p>
+    <pre id="a26"></pre>
+    <p>String trim()</p>
     <p id="a27"></p>
+    <p>String trim with replace and regular expressions.</p>
     <p id="a28"></p>
+    <p>
+      //Extracting String characters. //1. charAt(position) 2.
+      charCodeAt(position) 3. Property access [ ]
+    </p>
     <p id="a29"></p>
+    <p>charCodeAt(position)</p>
     <p id="a30"></p>
+    <p>Property access [ ]</p>
     <p id="a31"></p>
+    <p>Text to be converted .......>></p>
     <p id="a32"></p>
+    <p>Converting string into array...</p>
     <p id="a33"></p>
+    <p>Let's see for splittxt[3]</p>
+    <p id="a34"></p>
 
     <script>
       //Stirng length
@@ -133,6 +149,46 @@
       //to replace all occurances in a string... make use of /g
       var replc4 = str2.replace(/Declaring/g, "Defining");
       document.getElementById("a22").innerHTML = replc4;
+      //upper case
+      var uc = str2.toUpperCase();
+      document.getElementById("a23").innerHTML = uc;
+      //lower case
+      var lc = str2.toLowerCase();
+      document.getElementById("a24").innerHTML = lc;
+      //Concating strings.
+      var str3 = "Hey ! this is string 3";
+      var conKat = str.concat(" ", str2, " ", str3);
+      //New string 4
+      document.getElementById("a25").innerHTML = conKat;
+      var str4 = "              HaHa       Ha HA             !";
+      //String trimming
+      document.getElementById("a26").innerHTML = "str 4 is : " + str4;
+      var strtrm = str4.trim();
+      document.getElementById("a27").innerHTML = strtrm;
+      //Remove alerts to see better functioning.
+      //window.alert("str4 is : " + str4);
+      var strtrm2 = str4.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "");
+      document.getElementById("a28").innerHTML = strtrm2;
+      //alert("strtrm is : " + strtrm);
+      //alert("strtrm2 is : " + strtrm2);
+
+      //Extracting String characters.
+      //1. charAt(position) 2. charCodeAt(position) 3. Property access [ ]
+      var chAt = strtrm.charAt(1);
+      document.getElementById("a29").innerHTML =
+        " char at strtrm.charAt(1) : " + chAt;
+      //charCodeAt(pos)
+      var chCodeAt = strtrm.charCodeAt(1);
+      document.getElementById("a30").innerHTML =
+        "char code at strtrm.charCodeAt(1) : " + chCodeAt;
+      // property access
+      document.getElementById("a31").innerHTML = "strtrm[1] is : " + strtrm[1];
+      //Coverting string into array ..
+      var txt = "a,b,c,d,e,f";
+      var splittxt = txt.split(",");
+      document.getElementById("a32").innerHTML = "This is text . '" + txt + "'";
+      document.getElementById("a33").innerHTML = splittxt;
+      document.getElementById("a34").innerHTML = splittxt[3];
     </script>
   </body>
 </html>
