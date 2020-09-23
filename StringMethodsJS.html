@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Some String functions</title>
+  </head>
+  <body>
+    <h1>Some String functions</h1>
+    <p>For calculating length of strings.</p>
+    <p id="a1"></p>
+    <p id="a2"></p>
+    <p>For finding substring in a string</p>
+    <p id="a3"></p>
+    <p id="a4"></p>
+    <p id="a5"></p>
+    <p>For finding last index of substring</p>
+    <p id="a6"></p>
+    <p>In case it don't find string. Either way index of or last index of.</p>
+    <p id="a7"></p>
+    <p>Here starts parameterised finding. I am using index point = 10 here.</p>
+    <p id="a8"></p>
+    <p>Now parameter is changed to 40</p>
+    <p id="a9"></p>
+    <p>Now using parameterised last index of.</p>
+    <p id="a10"></p>
+    <p>Now searching with the help of search keyword.</p>
+    <p id="a11"></p>
+    <p>Now slicing a string using slice method.</p>
+    <p id="a12"></p>
+    <p>Slicing like a pizza slice. Picking a substring from string</p>
+    <p id="a13"></p>
+    <p>Slicing from negative index.</p>
+    <p id="a14"></p>
+    <p>Sliced from negative index.</p>
+    <p id="a15"></p>
+    <p id="a16"></p>
+    <p id="a17"></p>
+    <p id="a18"></p>
+    <p id="a19"></p>
+    <p id="a20"></p>
+
+    <script>
+      //Stirng length
+      var a = "WE gonna rock in JS!";
+      var b = a.length;
+      document.getElementById("a1").innerHTML = a;
+      document.getElementById("a2").innerHTML = b;
+      //Find a substring
+      var str =
+        "I am JS enthusiast. I like to code in JS. JS is interactive language.";
+      var substr = "JS"; //This can be also done without using substr variable.
+      var pos = str.indexOf(substr);
+      document.getElementById("a3").innerHTML = str;
+      document.getElementById("a4").innerHTML = substr;
+      document.getElementById("a5").innerHTML = pos;
+      //Find last index of sub string.
+      var pos2 = str.lastIndexOf(substr);
+      document.getElementById("a6").innerHTML = pos2;
+      //What will be the result if in any way (indexOf/lastIndexOf) substring is not found?
+      var substr2 = "Hi";
+      var pos3 = str.lastIndexOf(substr2);
+      document.getElementById("a7").innerHTML = pos3;
+      //now these above methods can be parameterised too. On the basis of index, search will start.
+      var pos4 = str.indexOf(substr, 10);
+      document.getElementById("a8").innerHTML = pos4;
+      var pos5 = str.indexOf(substr, 40);
+      document.getElementById("a9").innerHTML = pos5;
+      //Similarly, this can be seen for last index of
+      var pos6 = str.lastIndexOf(substr, 10);
+      document.getElementById("a10").innerHTML = pos6;
+      // Now searching in a string using search
+      var pos7 = str.search(substr);
+      document.getElementById("a11").innerHTML = pos7;
+      // Slicing of a string
+      var sli1 = str.slice(10);
+      document.getElementById("a12").innerHTML = sli1;
+      // Slicing like a pizza slice. Picking a substring from string
+      var sli2 = str.slice(7, 17);
+      document.getElementById("a13").innerHTML = sli2;
+      //Slicing from negative index.
+      var sli3 = str.slice(-30, -15);
+      document.getElementById("a14").innerHTML = sli3;
+      var sli4 = str.slice(-10);
+      document.getElementById("a15").innerHTML = sli4;
+    
+    </script>
+  </body>
+</html>
