@@ -34,11 +34,36 @@
     <p id="a14"></p>
     <p>Sliced from negative index.</p>
     <p id="a15"></p>
+    <p id="a16a"></p>
+    <p>Now starting substr()method. Here method(a,b) type is used--></p>
     <p id="a16"></p>
+    <p>substr(10) is used.</p>
     <p id="a17"></p>
+    <p>substr(-10) is used.</p>
     <p id="a18"></p>
+    <p>Replacing string content. str2.replace("Declaring", "Defining")</p>
     <p id="a19"></p>
+    <p>
+      By default replace method replaces first occurance. & is case sensitive.
+    </p>
     <p id="a20"></p>
+    <p>See no change! So use '/i'to make it case insensitive.</p>
+    <p id="a21"></p>
+    <p>
+      to replace all occurances in a string... make use of '/g' that's global-->
+    </p>
+    <p id="a22"></p>
+    <p id="a23"></p>
+    <p id="a24"></p>
+    <p id="a25"></p>
+    <p id="a26"></p>
+    <p id="a27"></p>
+    <p id="a28"></p>
+    <p id="a29"></p>
+    <p id="a30"></p>
+    <p id="a31"></p>
+    <p id="a32"></p>
+    <p id="a33"></p>
 
     <script>
       //Stirng length
@@ -83,7 +108,31 @@
       document.getElementById("a14").innerHTML = sli3;
       var sli4 = str.slice(-10);
       document.getElementById("a15").innerHTML = sli4;
-    
+      // Substr() method to take out an substring ..
+      //difference is the second parameter denotes length rather than range.
+      var str2 =
+        "Declaring my second string. Declaring is different from Defining!";
+      document.getElementById("a16a").innerHTML = "The new string is : " + str2;
+      var substri1 = str2.substr(10, 9);
+      document.getElementById("a16").innerHTML = substri1;
+      //with no parameter
+      var substri2 = str2.substr(10);
+      document.getElementById("a17").innerHTML = substri2;
+      //with negative indexing..
+      var substri3 = str2.substr(-10);
+      document.getElementById("a18").innerHTML = substri3;
+      //String replace() content method ..
+      var replc1 = str2.replace("Declaring", "Defining");
+      document.getElementById("a19").innerHTML = replc1;
+      //Case sensitive so, won't work
+      var replc2 = str2.replace("DECLARING", "Defining");
+      document.getElementById("a20").innerHTML = replc2;
+      //To make it case insensitive.
+      var replc3 = str2.replace(/DECLARING/i, "Defining");
+      document.getElementById("a21").innerHTML = replc3;
+      //to replace all occurances in a string... make use of /g
+      var replc4 = str2.replace(/Declaring/g, "Defining");
+      document.getElementById("a22").innerHTML = replc4;
     </script>
   </body>
 </html>
