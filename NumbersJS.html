@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numbers in JS</title>
+  </head>
+  <body>
+    <h1>Numbers in JS</h1>
+    <p>Js has only one type of number. That is number.</p>
+    <p id="a1"></p>
+    <p>Addition of 2 decimal numbers is not always truw.</p>
+    <p id="a2"></p>
+    <p>JS trys to convert the numeric strings into number.</p>
+    <p id="a3"></p>
+    <p id="a4"></p>
+    <p id="a5"></p>
+    <p id="a6"></p>
+    <p>But in addition it does not works..</p>
+    <br /><br />
+    <p>NaN is not a legal number.</p>
+    <p id="a7"></p>
+
+    <script>
+      var a = 1,
+        b = 1.1,
+        c = 1e5,
+        d = 1e-5,
+        e = 1.2,
+        f = "100", //numeric string.
+        g = 10,
+        h = "hi";
+
+      document.getElementById("a1").innerHTML =
+        "a = " +
+        a +
+        "<br>" +
+        "b = " +
+        b +
+        "<br>" +
+        "c = " +
+        c +
+        "<br>" +
+        "d = " +
+        d +
+        "<br>" +
+        "e = " +
+        e +
+        "<br>" +
+        "f = '" +
+        f +
+        "'" +
+        "<br>" +
+        "g = " +
+        g +
+        "<br>" +
+        "h = " +
+        h;
+      document.getElementById("a2").innerHTML = b + e;
+      document.getElementById("a3").innerHTML = "f/g:" + f / g;
+      document.getElementById("a4").innerHTML = "f*g:" + f * g;
+      document.getElementById("a5").innerHTML = "f-g:" + (f - g); //Used brakets here.
+      document.getElementById("a6").innerHTML = "f+g:" + f + g;
+      document.getElementById("a7").innerHTML = "h/g:" + h / g;
+    </script>
+  </body>
+</html>
